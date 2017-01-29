@@ -1,6 +1,8 @@
 html, body {
   height: 100%;
   box-sizing: border-box;
+  font-family:"Roboto";
+
 }
 
 *, *:before, *:after {
@@ -81,7 +83,6 @@ CSS for chat page
   float: right;
   border-radius: 5px;
   height:20px;
-  
   padding:bottom:5px;
   border:solid 1px black;
   box-shadow:2px 2px 2px grey;
@@ -181,8 +182,9 @@ CSS for chat page
   padding: 10px;
   border: solid 1px lightgrey;
   border-radius: 4px;
-  display: block;
+  display: block;^Mfloat:left;
   width: 100%;
+
 }
 
 
