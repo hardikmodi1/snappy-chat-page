@@ -1,149 +1,183 @@
 html, body {
-    height: 100%;
-    box-sizing: border-box;
+  height: 100%;
+  box-sizing: border-box;
 }
 
 *, *:before, *:after {
-    box-sizing: inherit;
+  box-sizing: inherit;
 }
-body.homepage{
+
+body.homepage {
   background-image: url("real.jpg");
   background-size: cover;
   background;no-repeat;
 }
-.button{
+
+.button {
   background-color: red;
-  color:white;
-  border:solid 1px red;
-  border-radius:3px;
-  box-shadow:inherit 0 3px 3px green;
-  cursor:pointer;
-  text-shadow:1px 1px yellow;
-  box-shadow: 5px 5px 5px blue;
-  blur-radius:10px;
+  color: white;
+  border: solid 1px red;
+  border-radius: 3px;
+  box-shadow: inherit 0 3px 3px green;
+  cursor: pointer;
+
+  box-shadow: 3px 3px 3px blue;
+  blur-radius: 10px;
 }
-.button:hover{
-  background:white;
-  color:blueviolet;
+
+.button:hover {
+  background: white;
+  color: blueviolet;
   box-shadow: 5px 5px 5px red;
 }
-.main{
-  width:500px;
-  margin:auto;
+
+.main {
+  width: 500px;
+  margin: auto;
   position: relative;
   top: 50%;
   transform: translateY(-50%);
+}
 
+.logo {
+  text-shadow: 1px 1px yellow;
+  font-size: 32px;
+  margin-bottom: 15px;
+  color: red;
+  margin-top: 0;
+  margin-bottom: 10px;
 }
-.logo{
-  text-shadow:1px 1px yellow;
-  font-size:32px;
-  margin-bottom:15px;
-  color:red;
-  margin-top:0;
-  margin-bottom:10px;
-}
-.tagline{
-  font-size:20px;
-  color:white;
+
+.tagline {
+  font-size: 20px;
+  color: white;
 }
 /*
 CSS for chat page
 */
-.member-area{
-  position:fixed;
-  top:0;
-  bottom:0;
-  left:0;
-  background:green;
-  width:30%;
-  color:white;
-  overflow:auto;
+.member-area {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  background: green;
+  width: 30%;
+  color: white;
+  overflow: auto;
 }
-.user-info{
-  background:blue;
-  padding:10px;
-  border:solid 1px blue;
 
+.user-info {
+  background: blue;
+  height:65px;
+  padding: 10px;
+  border: solid 1px blue;
+  padding-right:15px;
+  pdding-top:15px;
 }
-.logout{
-  float:right;
-  border-radius:5px;
+
+.logout {
+  float: right;
+  border-radius: 5px;
+  height:20px;
+  padding:5px;
+  padding:bottom:5px;
 }
-.logout:hover{
-  color:blue;
+
+.logout:hover {
+  color: blue;
   background-color: white;
-  cursor:pointer;
+  cursor: pointer;
 }
-.member.active{
-  font-weight:bold;
+
+.member.active {
+  font-weight: bold;
   background-color: red;
-  color:yellow;
+  color: yellow;
+  height:45px;
+}
 
+.dot {
+  border: solid 5px blue;
+  border-radius: 50%;
+  float: right;
+  margin-top: 3px;
 }
-.dot{
-  border:solid 5px blue;
-  border-radius:50%;
-  float:right;
-  margin-top:3px;
-}
-.member{
-  padding:10px;
-  border-bottom:solid 1px white;
 
+.member {
+  padding: 10px;
+  border-bottom: solid 1px white;
+  height:45px;
 }
-.member:hover{
-  cursor:pointer;
-  color:green;
+
+.member:hover {
+  cursor: pointer;
+  color: green;
   background: white;
 }
-.message-area{
+
+.message-area {
   background-color: :azure;
-  position:fixed;
-  left:30%;
-  top:0;
-  bottom:0;
-  width:70%;
+  position: fixed;
+  left: 30%;
+  top: 0;
+  bottom: 0;
+  width: 70%;
 }
-.chat-info{
-  background-color:yellow;
-  padding:10px;
-  color:black;
-}
-.messages{
-  background:lightblue;
-  height:90%;
-  overflow:auto;
-  padding:10px;
-}
-.message{
-  background:#fff;
-  padding:10px;
-  margin-bottom:10px;
-  border-radius:4px;
-  color:black;
-  width:70%;
-  float:left;
-}
-.message.by-user{
-  background:grey;
-  float:right;
-  width:70%;
-}
-.chat-form{
-  position:fixed;
-  left:30%;
-  bottom:0;
-  width:70%;
-  background: white;
-  padding:20px;
-  background-color: orange;
 
+.chat-info {
+  background-color: yellow;
+  padding: 10px;
+  color: black;
 }
-.chat-message{
-  padding:10px;
-  border:solid 1px lightgrey;
+
+.messages {
+  background: lightblue;
+  height: 90%;
+  overflow: auto;
+  padding: 10px;
+}
+
+.message {
+  background: #fff;
+  padding: 10px;
+  margin-bottom: 10px;
   border-radius: 4px;
-  display:block;
-  width:100%;
+  color: black;
+  width: 70%;
+  float: left;
+}
+
+.message.by-user {
+  background: grey;
+  float: right;
+  width: 70%;
+}
+
+.chat-form {
+  position: fixed;
+  left: 30%;
+  bottom: 0;
+  width: 70%;
+  background: white;
+  padding: 20px;
+  background-color: orange;
+}
+
+
+.chat-message {
+  padding: 10px;
+  border: solid 1px lightgrey;
+  border-radius: 4px;
+  display: block;
+  width: 100%;
+}
+
+
+.ph{
+  float:left;
+  height:30px;
+  width:30px;
+  border:solid 1px red;
+  border-radius:50%;
+  margin-right:5px;
 }
