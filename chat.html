@@ -13,143 +13,47 @@
       <div class="photo">
         <img class="ph" src="images.jpg"  height="5px" width="5px";/>
       </div>
-      Hardik Modi
-      <span class="logout">Log Out</span>
+      <span id="username"></span>
+      <span class="logout" onclick="logout()">Log Out</span>
     </div>
-    <div class="members">
-      <div class="member active">
-        <div class="dot"></div>
-        <div class="photo">
-          <img class="ph" src="images.jpg"  height="5px" width="5px";/>
-        </div>
-        Abhishek
+    <div class="members" id="members">
 
-      </div>
-      <div class="member active">
-        <div class="dot"></div>
-        <div class="photo">
-          <img class="ph" src="images.jpg"  height="5px" width="5px";/>
-        </div>
-        Preet
-
-      </div>
-      <div class="member">
-        <div class="photo">
-          <img class="ph" src="images.jpg"  height="5px" width="5px";/>
-        </div>
-        Maitreya
-
-      </div>
-      <div class="member">
-        Nilesh
-
-      </div>
-      <div class="member">
-        Nikesh
-
-      </div>
-      <div class="member">
-        Mayank
-
-      </div>
-      <div class="member">
-        Hardiki
-
-      </div>
-      <div class="member">
-        Dhruval
-
-      </div>
-      <div class="member">
-        kirtan
-
-      </div>
-      <div class="member">
-        bruce lee
-
-      </div>
-      <div class="member">
-        lady gaga
-
-      </div>
-      <div class="member">
-        bachhan
-
-      </div>
-      <div class="member">
-        batman
-
-      </div>
-      <div class="member">
-        Maitreya
-
-      </div>
-      <div class="member">
-        Maitreya
-
-      </div>
-      <div class="member">
-        Shivam
-
-      </div>
-      <div class="member">
-        Mainek
-
-      </div>
-      <div class="member">
-        Maher
-
-      </div>
     </div>
-  </div>
+    </div>
+
   <div class="message-area">
     <div class="chat-info">
       Preet
         </div>
-      <div class="messages">
-      <div class="message by-user">
-        Hey?
-      </div>
-      <div class="message">
-        how are you
-      </div>
-      <div class="message by-user">
-        kya kar rahe ho?
-      </div>
-      <div class="message">
-        movie
-      </div>
-      <div class="message">
-        how are you
-      </div>
-      <div class="message">
-        how are you
-      </div>
-      <div class="message">
-        how are you
-      </div>
-      <div class="message">
-        how are you
-      </div>
-      <div class="message by-user">
-        how are you
-      </div>
-      <div class="message">
-        how are you
-      </div>
-      <div class="message">
-        how are you
-      </div>
-      <div class="message by-user">
-        how are you
-      </div>
-      <div class="message by-user">
-        how are you
-      </div>
+      <div class="messages" id = "messages">
+        <div id="message by-user">
+
+        </div>
+
     </div>
     <div class="chat-form">
-      <input type="text" class="chat-message" placeholder="write your message here and press enter....">
+      <input type="hidden" id="chat-id"/>
+      <input type="text" class="chat-message" id="message-text" placeholder="write your message here and press enter....">
+      <button id="send-button">send</button>
     </div>
   </div>
+  <script src="https://www.gstatic.com/firebasejs/3.6.7/firebase.js"></script>
+  <script>
+    // Initialize Firebase
+    var config = {
+      apiKey: "AIzaSyDNA50SoCtgMWHDzK2EkdIsABaproPFL2U",
+      authDomain: "snappychat-5bd3e.firebaseapp.com",
+      databaseURL: "https://snappychat-5bd3e.firebaseio.com",
+      storageBucket: "snappychat-5bd3e.appspot.com",
+      messagingSenderId: "184272493946"
+    };
+    firebase.initializeApp(config);
+  </script>
+
+
+  <script type="text/javascript" src="function.js"> </script>
+  <script type="text/javascript" src="app.js">  </script>
+  <script type="text/javascript" src="chat.js">  </script>
+
 </body>
 </html>
