@@ -215,3 +215,10 @@ CSS for chat page
   box-shadow: 1px 1px 1px yellow;
 
 }
+
+
+.img-round{
+  border-radius: 50%;
+  height: 40px;
+  width: 30px;
+}

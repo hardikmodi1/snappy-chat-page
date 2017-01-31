@@ -21,7 +21,7 @@ function loginWithGoogle(){
   // The signed-in user info.
   var user = result.user;
   console.log(user);
-  createUser(user.uid,user.displayName,user.email);
+  createUser(user.uid,user.displayName,user.email,/*user.photoURL*/);
 
 //  console.log(user);
   // ...
@@ -46,7 +46,7 @@ function logInUser(){
   loginWithGoogle();
 }
 
-function createUser(uid,uname,uemail){
+function createUser(uid,uname,uemail,photo){
   var database=firebase.database();
   var usersRef=database.ref("users");
 
@@ -54,6 +54,8 @@ function createUser(uid,uname,uemail){
     id:uid,
     name:uname,
     email:uemail
+    //photoId: photo
+
 
   };
   usersRef.child(uid).set(user).then(function(){
@@ -68,9 +70,12 @@ function ifUserIsLoggedIn(fn){
     window.currentUser={
       id:user.uid,
       name:user.displayName,
-      email:user.email
-    };
+      email:user.email,
+      //photo:user.photoURL
 
+      };
+
+    //insert();
     fn();
   } else {
     // No user is signed in.
@@ -164,7 +169,7 @@ function logout(){
   // Sign-out successful.
 }, function(error) {
   // An error happened.
-
+console.error('Sign Out Error',error);
 
 });
 }
@@ -173,3 +178,38 @@ function logout(){
 function clearfields() {
   document.getElementById("message-text").value="";
 }
+
+
+
+
+/*function insert(){
+    var src = document.getElementById("gamediv");
+    var img = document.createElement("img");
+    img.src = window.currentUser.photo;
+    img.height=40;
+    img.width=30;
+    img.style.borderRadius="50%;";
+    src.appendChild(img);
+    img.style.borderRadius = "25px";
+    console.log(window.currentUser.photo);
+
+}
+
+function uPhoto() {
+  console.log(photo);
+ return document.write(photo);
+}
+
+function renderUser1(user) {
+    var uid = user.id;
+    var chat_id = getChatId(window.currentUser.id, uid);
+    var name = user.name;
+    var html = '<div id="' + chat_id + '" class="member">' + name + '</div>';
+
+    return name;
+}
+
+function UName(name) {
+  var uName=document.getElementById('chat-in').innerHTML= name;
+}
+*/
