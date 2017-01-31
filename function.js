@@ -20,15 +20,15 @@ function loginWithGoogle(){
    //  var token = result.credential.accessToken;
   // The signed-in user info.
   var user = result.user;
-  console.log(user);
-  createUser(user.uid,user.displayName,user.email,/*user.photoURL*/);
+
+  createUser(user.uid,user.displayName,user.email,user.photoURL);
 
 //  console.log(user);
   // ...
 }).catch(function(error) {
   // Handle Errors here.
   //create user if it doesn't exist
-  console.log(error);
+  //console.log(error);
 
 });
 }
@@ -53,8 +53,8 @@ function createUser(uid,uname,uemail,photo){
   var user={
     id:uid,
     name:uname,
-    email:uemail
-    //photoId: photo
+    email:uemail,
+    photoId:photo
 
 
   };
@@ -62,6 +62,28 @@ function createUser(uid,uname,uemail,photo){
     redirect("chat.html");
   });
 }
+
+
+
+function insert(){
+    var src = document.getElementById("gamediv");
+    var img = document.createElement("img");
+    img.src = window.currentUser.photo;
+    img.height=40;
+    img.width=30;
+    img.style.borderRadius="50%;";
+    src.appendChild(img);
+    img.style.borderRadius = "25px";
+    console.log(window.currentUser.photo);
+
+}
+
+function uPhoto() {
+  console.log(photo);
+ return document.write(photo);
+}
+
+
 
 function ifUserIsLoggedIn(fn){
   firebase.auth().onAuthStateChanged(function(user) {
@@ -71,11 +93,11 @@ function ifUserIsLoggedIn(fn){
       id:user.uid,
       name:user.displayName,
       email:user.email,
-      //photo:user.photoURL
+      photo:user.photoURL
 
       };
 
-    //insert();
+    insert();
     fn();
   } else {
     // No user is signed in.
@@ -130,7 +152,7 @@ function onClickMultiple(className, func) {
 function loadMessages(chat_id,fn){
   var database=firebase.database();
   var chatsRef=database.ref("chats");
-
+  console.log(chatsRef);
   chatsRef.child(chat_id).on('value',function(snapshot){
     var messages=snapshot.val();
     fn(messages);
@@ -175,41 +197,12 @@ console.error('Sign Out Error',error);
 }
 
 
-function clearfields() {
-  document.getElementById("message-text").value="";
-}
 
-
-
-
-/*function insert(){
-    var src = document.getElementById("gamediv");
-    var img = document.createElement("img");
-    img.src = window.currentUser.photo;
-    img.height=40;
-    img.width=30;
-    img.style.borderRadius="50%;";
-    src.appendChild(img);
-    img.style.borderRadius = "25px";
-    console.log(window.currentUser.photo);
-
-}
-
-function uPhoto() {
-  console.log(photo);
- return document.write(photo);
-}
-
-function renderUser1(user) {
-    var uid = user.id;
-    var chat_id = getChatId(window.currentUser.id, uid);
-    var name = user.name;
-    var html = '<div id="' + chat_id + '" class="member">' + name + '</div>';
-
-    return name;
-}
 
 function UName(name) {
   var uName=document.getElementById('chat-in').innerHTML= name;
 }
-*/
+
+function clearfields() {
+  document.getElementById("message-text").value="";
+}
