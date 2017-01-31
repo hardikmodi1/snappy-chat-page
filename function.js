@@ -134,7 +134,7 @@ function loadMessages(chat_id,fn){
 
 function renderMessage(message){
   var text = message.text;
-  var msgClass="";
+  var msgClass="message";
   if(message.sender_id==window.currentUser.id){
     msgClass="message by-user";
   }
@@ -167,4 +167,9 @@ function logout(){
 
 
 });
+}
+
+
+function clearfields() {
+  document.getElementById("message-text").value="";
 }

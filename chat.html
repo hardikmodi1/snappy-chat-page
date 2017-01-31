@@ -22,17 +22,15 @@
     </div>
 
   <div class="message-area">
-    <div class="chat-info">
-      Preet
-        </div>
+
       <div class="messages" id = "messages">
-        
+
 
     </div>
     <div class="chat-form">
       <input type="hidden" id="chat-id"/>
       <input type="text" class="chat-message" id="message-text" placeholder="write your message here and press enter....">
-      <button id="send-button">send</button>
+      <button id="send-button" type="reset" class="btn-send" onclick="clearfields()">send</button>
     </div>
   </div>
   <script src="https://www.gstatic.com/firebasejs/3.6.7/firebase.js"></script>

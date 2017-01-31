@@ -83,7 +83,7 @@ CSS for chat page
   float: right;
   border-radius: 5px;
   height:20px;
-  padding:bottom:5px;
+  padding-bottom:5px;
   border:solid 1px black;
   box-shadow:2px 2px 2px grey;
   padding-bottom:5px;
@@ -167,6 +167,7 @@ CSS for chat page
   width: 70%;
 }
 
+
 .chat-form {
   position: fixed;
   left: 30%;
@@ -175,6 +176,7 @@ CSS for chat page
   background: white;
   padding: 20px;
   background-color: orange;
+  overflow:auto;
 }
 
 
@@ -182,7 +184,8 @@ CSS for chat page
   padding: 10px;
   border: solid 1px lightgrey;
   border-radius: 4px;
-  display: block;^Mfloat:left;
+  display: block;
+  float:left;
   width: 100%;
 
 }
@@ -200,4 +203,10 @@ CSS for chat page
   cursor:pointer;
   height:200px;
   width:200px;
+}
+
+
+.btn-send{
+  color:red;
+  border-radius:5px;
 }
