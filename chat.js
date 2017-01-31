@@ -37,5 +37,6 @@ ifUserIsLoggedIn(function(){
        var chat_id=getElement("chat-id").value;
 
        sendMessage(chat_id,text);
+       clearfields();
      });
    });

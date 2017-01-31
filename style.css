@@ -209,4 +209,9 @@ CSS for chat page
 .btn-send{
   color:red;
   border-radius:5px;
+  border-radius: solid 50px red;
+  margin-top:5px;
+  width:80px;
+  box-shadow: 1px 1px 1px yellow;
+
 }

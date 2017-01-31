@@ -2,6 +2,9 @@
 <html>
 <head>
   <title>snappy</title>
+  https://plus.google.com/s2/photos/profile/<user_id>?sz=100px
+    https://plus.google.com/s2/photos/profile/116018066779980863044?sz=100
+
   <link rel ="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css" />
   <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
   <link rel ="stylesheet" href="style.css" />
@@ -12,6 +15,8 @@
     <div class="user-info">
       <div class="photo">
         <img class="ph" src="images.jpg"  height="5px" width="5px";/>
+        <!--<img src="https://plus.google.com/s2/photos/profile/116018066779980863044?sz=100" width="100" height="100">-->
+
       </div>
       <span id="username"></span>
       <span class="logout" onclick="logout()">Log Out</span>
@@ -30,7 +35,7 @@
     <div class="chat-form">
       <input type="hidden" id="chat-id"/>
       <input type="text" class="chat-message" id="message-text" placeholder="write your message here and press enter....">
-      <button id="send-button" type="reset" class="btn-send" onclick="clearfields()">send</button>
+      <button id="send-button" type="reset" class="btn-send">send</button>
     </div>
   </div>
   <script src="https://www.gstatic.com/firebasejs/3.6.7/firebase.js"></script>
