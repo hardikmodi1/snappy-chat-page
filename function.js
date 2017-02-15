@@ -70,7 +70,7 @@ function insert(){
     var img = document.createElement("img");
     img.src = window.currentUser.photo;
     img.height=40;
-    img.width=30;
+    img.width=40;
     img.style.borderRadius="50%;";
     src.appendChild(img);
     img.style.borderRadius = "25px";
@@ -206,3 +206,13 @@ function UName(name) {
 function clearfields() {
   document.getElementById("message-text").value="";
 }
+
+
+
+document.getElementById("message-text")
+    .addEventListener("keyup", function(event) {
+    event.preventDefault();
+    if (event.keyCode == 13) {
+        document.getElementById("send-button").click();
+    }
+});
